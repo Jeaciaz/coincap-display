@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:700|Roboto&display=swap);
+.table[data-v-138f4886] {
+  max-width: 100%;
+  width: 60%;
+  margin: 10vh auto 0;
+  padding: 3rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.table__body[data-v-138f4886] {
+    list-style-type: none;
+    padding: 0;
+    max-height: 25vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 10px;
+    padding-right: 5px;
+    /**
+            Due to Firefox having awful scrollbar styling support, we have to settle with the default
+        */
+    scrollbar-color: transparent transparent;
+    /**
+            Firefox part ends here
+            Chrome part starts here
+        */
+    /**
+            Chrome part ends here
+        */
+}
+.table__body[data-v-138f4886]:hover {
+      scrollbar-color: auto;
+}
+.table__body[data-v-138f4886]::-webkit-scrollbar {
+      width: 5px;
+}
+.table__body[data-v-138f4886]:hover::-webkit-scrollbar-thumb {
+      background: rgba(15, 82, 59, 0.3);
+      border-radius: 5px;
+}
+.table__row[data-v-138f4886] {
+    display: flex;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 0.25rem;
+}
+.table__row_header[data-v-138f4886] {
+      background: #9bedd1;
+}
+.table__row[data-v-138f4886]:not(.table__row_header):hover {
+      background: #dcf9ef;
+}
+.table__row[data-v-138f4886]:not(:last-of-type) {
+      margin-bottom: 1rem;
+}
+.table__cell[data-v-138f4886] {
+    flex-basis: 25%;
+    padding: 0.5rem;
+}
+.table__cell_header[data-v-138f4886] {
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+}
+.table__cell_large[data-v-138f4886] {
+      flex-basis: 50%;
+}
+.table__mode-toggle_label[data-v-138f4886] {
+    display: block;
+    left: 0;
+    top: 0;
+    margin-bottom: 2rem;
+    position: relative;
+    width: 15rem;
+    height: 2rem;
+    background: #5ae2b2;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.table__mode-toggle_label[data-v-138f4886]::after {
+      content: "Snapshot";
+      width: 10rem;
+      line-height: 2rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      background: #0f523b;
+      transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      border-radius: 1rem;
+      color: white;
+      cursor: pointer;
+}
+.table__mode-toggle_input:checked + .table__mode-toggle_label[data-v-138f4886] {
+      left: 0;
+}
+.table__mode-toggle_input:checked + .table__mode-toggle_label[data-v-138f4886]::after {
+        left: 5rem;
+        background: #1ea978;
+        content: "Websocket";
+}
+@media (max-width: 767px) {
+.table__cell[data-v-138f4886] {
+    flex-basis: 50%;
+}
+.table__cell[data-v-138f4886]:nth-of-type(n+3) {
+      display: none;
+}
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  max-width: 1200px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
+  margin: auto;
+  color: #333;
+}
+.navbar {
+  border-radius: 0 0 5px 5px;
+  background: #5ae2b2;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+.navbar__logo {
+    display: inline-block;
+    max-height: 50px;
+    padding: 1rem;
+    padding-left: 3rem;
+    vertical-align: middle;
+}
+.navbar__header {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1.5rem;
+    line-height: 50px;
+    padding: 1rem 0;
+    vertical-align: middle;
+}
+
